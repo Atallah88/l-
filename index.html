@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+body {
+margin: 0;
+}
+/* Style the header */
+header {
+background-color: red;
+padding: 20px;
+text-align: center;
+}
+
+div {
+width: 100px;
+height: 100px;
+background: red;
+transition: width 1s;
+}
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+div:hover {
+width: 300px;
+}
+
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden; /* منع التمرير عند ظهور القائمة */
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+            position: relative;
+            background-color: #fff; /* خلفية للرمز */
+            border: 1px solid #ccc; /* حدود للرمز */
+            border-radius: 3px; /* زوايا مستديرة */
+        }
+
+        .sidebar {
+            list-style-type: none;
+            background-color: rgba(255, 255, 255, 0.95); /* خلفية بيضاء مع شفافية */
+            padding: 0;
+            margin: 0;
+            position: fixed; /* ثابتة لتغطي الشاشة */
+            top: 0;
+            left: -100%; /* مخفي بشكل افتراضي */
+            width: 80%; /* عرض القائمة 50% من الشاشة */
+            height: 100%; /* ارتفاع القائمة 100% من الشاشة */
+            transition: left 0.3s ease;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* ظل لجعلها بارزة */
+        }
+
+        .sidebar li {
+            padding: 15px;
+            border-bottom: 1px solid #ccc; /* حدود بين العناصر */
+        }
+
+        .sidebar li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .close-btn {
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #ff4c4c; /* لون خلفية الزر */
+            color: white; /* لون النص */
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .sidebar.show {
+            left: 0; /* يظهر عند إضافة هذه الفئة */
+        }
+
+        .menu-icon.hidden {
+            display: none; /* تخفي الرمز عند فتح القائمة */
+        }
+</style>
+</head>
+<body>
+<header>
+<h1>Al Rayyan Academy</h1>
+</header>
+     <span class="menu-icon" id="menuIcon" onclick="toggleMenu()">☰</span>
+    <ul class="sidebar" id="sidebar">
+        <li><button class="close-btn" onclick="toggleMenu()">إغلاق</button></li>
+        <li><a href="#">الرابط 1</a></li>
+        <li><a href="#">الرابط 2</a></li>
+        <li><a href="#">الرابط 3</a></li>
+    </ul>
+
+<br>
+<br>
+<br>
+<br>
+<div id="div1"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462535771_3862417490714075_3540223139180163700_n.jpg?stp=dst-jpg_s843x403&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=3xcoyU-fCSMQ7kNvgFddIif&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=AjY7aPX1AZA-_O5I8Rid2LD&oh=03_Q7cD1QHjzOd6GBOLFCmgb2L8XhmZxLa0iUIMJNIMaEtOpYq4aA&oe=6739AEEE"style="width:60%"></div>
+<br>
+<br>
+<br>
+<br>
+<div id="div2"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462542206_1061265885321776_8953268739783135032_n.jpg?stp=dst-jpg_s843x403&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=VL4y63Ewmv0Q7kNvgHotyDG&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=AYOzJbu4ItOIIhENeS4xf_a&oh=03_Q7cD1QFdscWe8ROBUXxsk-Lk_v16qDhFGeXJ0ViKB-tgzdtaSw&oe=67399480"style="width:60%"></div>
+<br>
+<br>
+<br>
+<br>
+<div id="div3">ease-in</div>
+<br>
+<br>
+<div id="div4">ease-out</div>
+<br>
+<br>
+<div id="div5">ease-in-out</div>
+<br>
+<br>
+
+
+
+
+<script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const menuIcon = document.getElementById('menuIcon');
+            sidebar.classList.toggle('show');
+            menuIcon.classList.toggle('hidden'); // Toggle visibility of the menu icon
+        }
+    </script>
+
+</body>
+</html>
